@@ -1,8 +1,8 @@
-var formulario = document.querySelector("#form")
-
+var formulario = document.querySelector(".formulario")//mandamos a llamar correctamente el id de la etiqueta form linea 14 de html
+//var formulario = document.querySelector("#form") aqui se detecta un error de syntaxis debido a que el id form esta mal escrito ya que debe de ser formulario y por eso no puede mandarlo a llamar la variable
 formulario.onsubmit = function(e) {
-
-  e.prevent();
+  e.preventDefault();//escribimos de manera correta el metodo de preventDefault
+  //e.prevent(); esta mal escrito el metodo de preventDefault
   
   var n = formulario.elements[0]
   var e = formulario.elements[1]
@@ -28,7 +28,7 @@ if (nombre.length > 0
     && edad < 120) ) {
   agregarInvitado(nombre, edad, nacionalidad)
   }
-}
+}//funcionformulario
 
 var botonBorrar = document.createElement("button")
 botonBorrar.textContent = "Eliminar invitado"
@@ -52,20 +52,23 @@ function agregarInvitado(nombre, edad, nacionalidad) {
     nacionalidad = "Peruana"
   }
 
-var lista = document.getElementById("lista-de-invitados")
+  var lista = document.getElementById("lista-de-invitados")//aqui verificamos que la etiqueta div de la linea 32 este bien indicada con un id, porque en caso contrario no, nos arrojara el resultado
 
 var elementoLista = document.createElement("div")
-elementoLista.classList.added("elemento-lista")
+elementoLista.classList.add("elemento-lista")//se escribe correctamente la funcion de add
+console.log(elementoLista);
+//elementoLista.classList.added("elemento-lista")error de sintaxis al agregar con un added en vez de add
 lista.appendChild(elementoLista)
 
-var spanNombre = document.createElement("span")
-var inputNombre = document.createElement("input")
-var espacio = document.createElement("br")
-spanNombre.textContent = "Nombre: "
-inputNombre.value = nombre 
-elementoLista.appendChild(spanNombre)
-elementoLista.appendChild(inputNombre)
-elementoLista.appendChild(espacio)
+//esta parte del codigo se puede borrar o cmoentar para evitar la doble escritura de las variables
+//var spanNombre = document.createElement("span")
+//var inputNombre = document.createElement("input")
+//var espacio = document.createElement("br")
+//spanNombre.textContent = "Nombre: "
+//inputNombre.value = nombre 
+//elementoLista.appendChild(spanNombre)
+//elementoLista.appendChild(inputNombre)
+//elementoLista.appendChild(espacio)
 
 function crearElemento(descripcion, valor) {
 var spanNombre = document.createElement("span")

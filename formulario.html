@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,15 +25,15 @@
       <option value="vnzl">Venezolana</option>
     </select>
     <br />
-    <input type="submit">
+   
+    <input type="submit" id="btn_submit"> <!-- creamos un id para mandarlo a llamar en Java Script -->
   </form>
 
-  <div>
+  <div id = "lista-de-invitados"><!-- creamos un id en el div en donde se encuentra la lista de invitador para que no nos marque error al llamarlo en ej Java Script -->
     <h2>Lista de invitados</h2>
-
   </div>
-
-  <script src="../formulario.js"></script>
+  <script src="./formulario.js"></script><!-- aqui procedemos a enlazar de manera correcta el archivo de Java Script -->
+  <!-- <script src="../formulario.js"></script> Aqui podemos observar que esta mal enlazado el archivo de Java Script -->
 </body>
 
 </html>
